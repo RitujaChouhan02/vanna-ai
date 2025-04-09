@@ -1,7 +1,13 @@
 from vanna_setup import vn  # your Vanna instance from earlier
+from doc import fetch_google_doc_text
+
+
+doc_id = "1Z2vseeWcZ24Ru9isd0zHwFWVQ5qg_fDZbevEl1SIrTI"
+domain_knowledge = fetch_google_doc_text(doc_id)
+vn.add_documentation(domain_knowledge)
 
 # Step 4: Ask a natural language question
-question = "Give me user_id and total amount who have invested the most in april 2025 with status = 1 and also give me the name of this user"
+question = "Give me the DoD view of the AUM from november 1, 2024"
 
 # Generate SQL using Vanna
 sql = vn.generate_sql(question)
