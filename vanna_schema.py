@@ -85,15 +85,15 @@ CREATE TABLE tblorders (
 );
 """
 
-# Sample Q&A training pair
-question = "What is the total AUM grouped by user?"
-sql = """
-SELECT user_id, SUM(amount) AS total_aum
-FROM tblorders
-WHERE status IN (1, 7, 8)
-AND order_type = 'BUY'
-GROUP BY user_id;
-"""
+# # Sample Q&A training pair
+# question = "What is the total AUM grouped by user?"
+# sql = """
+# SELECT user_id, SUM(amount) AS total_aum
+# FROM tblorders
+# WHERE status IN (1, 7, 8)
+# AND order_type = 'BUY'
+# GROUP BY user_id;
+# """
 
 # Additional domain knowledge
 # domain_knowledge = """
