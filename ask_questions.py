@@ -1,6 +1,8 @@
 from vanna_setup import vn  # your Vanna instance from earlier
 from doc import fetch_google_doc_text
 
+# ✅ Allow the LLM to inspect schema/data
+vn.allow_llm_to_see_data = True
 
 doc_id = "1Z2vseeWcZ24Ru9isd0zHwFWVQ5qg_fDZbevEl1SIrTI"
 domain_knowledge = fetch_google_doc_text(doc_id)

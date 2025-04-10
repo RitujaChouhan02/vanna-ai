@@ -1,5 +1,8 @@
 from vanna_setup import vn
 
+# ✅ Allow the LLM to inspect schema/data
+vn.allow_llm_to_see_data = True
+
 schema = """
 CREATE TABLE tblusers (
     user_id Float64,

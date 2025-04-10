@@ -27,4 +27,7 @@ CLICKHOUSE_URI = os.getenv("CLICKHOUSE_URI")
 engine = create_engine(CLICKHOUSE_URI)
 vn.engine = engine
 
+# ✅ Allow the LLM to inspect schema/data
+vn.allow_llm_to_see_data = True
+
 print("✅ Connected to ClickHouse!")
