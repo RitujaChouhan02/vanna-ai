@@ -85,22 +85,6 @@ CREATE TABLE tblorders (
 );
 """
 
-# # Sample Q&A training pair
-# question = "What is the total AUM grouped by user?"
-# sql = """
-# SELECT user_id, SUM(amount) AS total_aum
-# FROM tblorders
-# WHERE status IN (1, 7, 8)
-# AND order_type = 'BUY'
-# GROUP BY user_id;
-# """
-
-# Additional domain knowledge
-# domain_knowledge = """
-# - AUM stands for Assets Under Management. It is calculated as the sum of all order amounts from the tblorders table where status IN (1, 7, 8) and order_type is 'BUY'.
-# - DoD means Day-over-Day. It refers to grouping data by each day, often using DATE(order_date).
-# """
-
 # Add schema
 vn.add_ddl(schema)
 print("✅ Schema added to Vanna!")
